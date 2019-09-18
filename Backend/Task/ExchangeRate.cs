@@ -2,22 +2,19 @@
 {
     public class ExchangeRate
     {
-        public ExchangeRate(Currency sourceCurrency, Currency targetCurrency, decimal value)
+        public ExchangeRate(string sourceCurrency, string targetCurrency, decimal value)
         {
             SourceCurrency = sourceCurrency;
             TargetCurrency = targetCurrency;
             Value = value;
         }
 
-        public Currency SourceCurrency { get; }
+        public string SourceCurrency { get; }
 
-        public Currency TargetCurrency { get; }
+        public string TargetCurrency { get; }
 
         public decimal Value { get; }
 
-        public override string ToString()
-        {
-            return $"{SourceCurrency}/{TargetCurrency}={Value}";
-        }
+        public override string ToString() => $"{SourceCurrency}/{TargetCurrency}={Value}";
     }
 }

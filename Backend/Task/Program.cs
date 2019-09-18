@@ -7,14 +7,12 @@ namespace ExchangeRateUpdater
 {
     public static class Program
     {
-        private static readonly IEnumerable<Currency> currencies = new Currency[]{};
-
         public static void Main(string[] args)
         {
             try
             {
                 var provider = new ExchangeRateProvider();
-                var rates = provider.GetExchangeRates(currencies);
+                var rates = provider.GetExchangeRates();
 
                 Console.WriteLine($"Successfully retrieved {rates.Count()} exchange rates:");
                 foreach (var rate in rates)
